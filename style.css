@@ -1,16 +1,21 @@
+/* Import fonts we need to display on the website */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@font-face {
+    font-family: "Berlin";
+    src: url(./fonts/Berlin.ttf);
+}
 
 /* Root variables, so we don't have to write the hex color everytime */
 :root {
-    --background: black;
     --text: white;
+    --background: black;
     --cta-button: green;
 }
 
 /* Minimal CSS reset */
 html {
-    box-sizing: border-box;
     font-size: 16px;
+    box-sizing: border-box;
   }
   
 *, *:before, *:after {
@@ -28,6 +33,235 @@ ol, ul {
 }
   
 img {
-    max-width: 100%;
     height: auto;
+    max-width: 100%;
+}
+
+body {
+    color: var(--text);
+    padding: 2rem;
+    background: var(--background);
+}
+
+body p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body h1 {
+    font-family: "Berlin", sans-serif;
+}
+
+section {
+    margin-top: 100px;
+}
+
+/* Some global styling for certain classes we will apply on certain elements */
+.flex-container {
+    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-box {
+    width: clamp(260px, 100%, 600px);
+}
+
+.text-box p {
+    margin-top: 1rem;
+}
+
+.center {
+    text-align: center;
+}
+
+.title {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.button-container {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.cta-button,
+.ghost-button {
+    color: var(--text);
+    width: fit-content;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0.5rem 1rem;
+    background: none;
+    transition: 0.2s;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.cta-button:hover,
+.ghost-button:hover {
+    transform: scale(1.05);
+}
+
+.cta-button {
+    background-color: var(--cta-button);
+}
+
+.ghost-button {
+    border: 1px solid var(--text);
+}
+
+/* Custom styling from top content to bottom content */
+header {
+    width: 100%;
+    height: auto;
+}
+
+header nav {
+    gap: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    color: var(--text);
+    transition: 0.2s;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: var(--cta-button);
+}
+
+header nav a:last-of-type:hover {
+    color: var(--text);
+}
+
+header .hamburger {
+    border: none;
+    outline: none;
+    background: var(--cta-button);
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+main {
+    width: 100%;
+    height: auto;
+}
+
+.hero .text-box h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.events .separator {
+    height: 200px;
+    width: 3px;
+    background-color: var(--text);
+    display: none;
+}
+
+.events .flex-container:nth-of-type(1),
+.events .flex-container:nth-of-type(2) {
+    margin-bottom: 4rem;
+}
+
+.events .text-box button {
+    margin-top: 1rem;
+}
+
+.card {
+    width: clamp(280px, 30%, 500px);
+    border: 1px solid var(--text);
+}
+
+.card .card-content {
+    padding: 1rem;
+}
+
+.card .card-content p {
+    margin-top: 0.75rem;
+}
+
+.show-more {
+    left: 50%;
+    width: 200px;
+    position: relative;
+    transform: translateX(-50%);
+    margin-top: 2rem;
+    background: var(--background);
+    border: 1px solid var(--text);
+    color: var(--text);
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.2s;
+    padding: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.show-more:hover {
+    border-radius: 6px;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+}
+
+footer h1 {
+    margin-bottom: 1.5rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--text);
+    line-height: 1.8;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.2s;
+}
+
+footer a:hover {
+    color: var(--cta-button);
+}
+
+
+/* Media Querys to make our website responsive, so it works well with all sorts of devices */
+@media screen and (min-width: 1100px) {
+    main .events .separator {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    main .events .flex-container:nth-of-type(2) {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    main .activities .flex-container {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    header nav {
+        display: none;
+    }
+
+    header .hamburger {
+        display: block;
+    }
 }
