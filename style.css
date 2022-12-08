@@ -122,7 +122,7 @@ section {
     border: 1px solid var(--text);
 }
 
-/* Custom styling from top content to bottom content */
+/* Styling for the header */
 header {
     width: 100%;
     height: auto;
@@ -159,6 +159,7 @@ header .hamburger {
     display: none;
 }
 
+/* Styling for main content across all the pages */
 main {
     width: 100%;
     height: auto;
@@ -195,6 +196,12 @@ main {
 
 .card .card-content p {
     margin-top: 0.75rem;
+    height: 130px;
+}
+
+.activities .card .card-content p {
+    /* Smaller height for the cards on the main page to beautify the look of the card relative to the text */
+    height: 60px;
 }
 
 .show-more {
@@ -217,10 +224,94 @@ main {
     border-radius: 6px;
 }
 
+.contact .info-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.contact .info-container:first-of-type {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.contact .info-container:last-of-type {
+    margin-top: 0.4rem;
+}
+
+.contact .contact-icon {
+    /* Temporary color change to the icon - !! Needs to be changed later on !! */
+    filter: invert(1);
+    margin-right: 20px;
+}
+
+.contact .info-container a {
+    text-decoration: none;
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.2s;
+}
+
+.contact .info-container a:hover {
+    color: var(--cta-button);
+}
+
 .contact .map iframe {
     border-radius: 10px;
 }
 
+/* Styling for events.html page */
+.text-container {
+    margin-bottom: 4rem;
+}
+
+/* Styling for priser.html */
+.price-page .flex-container .card {
+    position: relative;
+}
+
+.price-page .flex-container .card::before {
+    /* Pseudo element to make a background image we can target with a filter, without affecting the card and it's content itself */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/images/Image-Placeholder.webp);
+    z-index: -100;
+    filter: brightness(55%);
+}
+
+.price-page .flex-container .card .prices {
+    padding: 1rem;
+    height: 540px;
+}
+
+.price-page .flex-container .card .prices h1 {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    text-decoration: underline;
+}
+
+.price-page .flex-container .card .prices p {
+    margin-top: 0.75rem;
+}
+
+.price-page .flex-container .card .card-content {
+    text-align: center;
+    background: var(--text);
+    color: var(--background);
+}
+
+/* Styling for omos.html page (about-page) */
+
+.author {
+    font-style: italic;
+}
+
+
+/* Styling for the footer */
 footer {
     width: 100%;
     height: auto;
