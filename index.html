@@ -10,15 +10,15 @@
 <body>
     <header>
         <div class="flex-container">
-            <div class="logo">
+            <a href="/" class="logo">
                 <img src="/images/logo/Logo.svg" width="120" height="60" alt="Outdoor Games Logo">
-            </div>
+            </a>
             <nav>
-                <a href="#">Aktiviteter</a>
-                <a href="#">Events</a>
-                <a href="#">Priser</a>
-                <a href="#">Om os</a>
-                <a class="cta-button" href="#">Book</a>
+                <a href="/aktiviteter.html">Aktiviteter</a>
+                <a href="/events.html">Events</a>
+                <a href="/priser.html">Priser</a>
+                <a href="/omos.html">Om os</a>
+                <a class="cta-button" href="/booking.html">Book</a>
             </nav>
             <button class="hamburger">
             </button>
@@ -33,8 +33,8 @@
                     <p>Vi har Aarhus' største udendørs anlæg til paintball med hele 5 flotte og udfordrende baner!</p>
                     <p>Mangler du et sted at holde din fodboldafslutning, polterabend eller andet, så book en tid hos os.</p>
                     <div class="button-container">
-                        <button class="cta-button">Book</button>
-                        <button class="ghost-button">Kontakt</button>
+                        <a href="/booking.html" class="cta-button">Book</a>
+                        <a href="#contact" class="ghost-button">Kontakt</a>
                     </div>
                 </div>
                 <div class="image-container">
@@ -53,8 +53,8 @@
                         <h1>Paintball</h1>
                         <p>Kæmp mod dine venner på en af vores fem flotte udendørs paintball baner.</p>
                         <div class="button-container">
-                            <div class="cta-button">Book</div>
-                            <div class="ghost-button">Læs mere</div>
+                            <a href="/booking.html" class="cta-button">Book</a>
+                            <a href="#" class="ghost-button">Læs mere</a>
                         </div>
                     </div>
                 </div>
@@ -63,11 +63,11 @@
                         <img src="/images/Image-Placeholder.webp"  height="200" alt="Image Placeholder">
                     </div>
                     <div class="card-content">
-                        <h1>Paintball</h1>
-                        <p>Kæmp mod dine venner på en af vores fem flotte udendørs paintball baner.</p>
+                        <h1>Promille hockey</h1>
+                        <p>Sjov udendørs aktivitet, hvor et par briller gør spillet lidt sværere.</p>
                         <div class="button-container">
-                            <div class="cta-button">Book</div>
-                            <div class="ghost-button">Læs mere</div>
+                            <a href="/booking.html" class="cta-button">Book</a>
+                            <a href="#" class="ghost-button">Læs mere</a>
                         </div>
                     </div>
                 </div>
@@ -76,11 +76,11 @@
                         <img src="/images/Image-Placeholder.webp" height="200" alt="Image Placeholder">
                     </div>
                     <div class="card-content">
-                        <h1>Paintball</h1>
-                        <p>Kæmp mod dine venner på en af vores fem flotte udendørs paintball baner.</p>
+                        <h1>Bumper ball</h1>
+                        <p>Spil bumper-ball på vores udendørs bane og skub dine venner i græsset.</p>
                         <div class="button-container">
-                            <div class="cta-button">Book</div>
-                            <div class="ghost-button">Læs mere</div>
+                            <a href="/booking.html" class="cta-button">Book</a>
+                            <a href="#" class="ghost-button">Læs mere</a>
                         </div>
                     </div>
                 </div>
@@ -103,7 +103,9 @@
                     <p>Outdoor Games er det perfekte sted at starte en polterabend.</p>
                     <p>I kan selv sammensætte de aktiviteter i ønsker at lave og jeres besøg kan være kort og inten eller langvarigt og hyggeligt efter jeres ønske.</p>
                     <p>Kontakt os endelig hvis det lyder intressant.</p>
-                    <button class="cta-button">Kontakt</button>
+                    <div class="button-container">
+                        <a href="#contact" class="cta-button">Kontakt</a>
+                    </div>
                 </div>
             </div>
             <div class="flex-container">
@@ -111,7 +113,9 @@
                     <h1>Firmaevent</h1>
                     <p>Leder i efter et sted at holde firmafest eller ønsker i en dag med teambuilding, så tilbyder Outdoor Games en lang række aktiviteter og andet, hvor alle er garanteret en sjov og hyggelig dag.</p>
                     <p>Skræddersy jeres egen dag, så den passer til jeres behov og ønsker.</p>
-                    <button class="cta-button">Kontakt</button>
+                    <div class="button-container">
+                        <a href="#contact" class="cta-button">Kontakt</a>
+                    </div>
                 </div>
                 <div class="separator"></div>
                 <div class="image-container">
@@ -128,14 +132,16 @@
                     <p>Hos Outdoor Games har vi også aktiviteter for de unge mennesker.</p>
                     <p>Ønsker i at holder blå andag i hyggelige og sjove omgivelser, så book en dag hos os og lav sjove aktiviteter som Bazooko Ball!</p>
                     <p>Kontakt os for at høre nærmere.</p>
-                    <button class="cta-button">Kontakt</button>
+                    <div class="button-container">
+                        <a href="#contact" class="cta-button">Kontakt</a>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="video">
             <div class="video-placeholder"></div>
         </section>
-        <section class="contact">
+        <section id="contact" class="contact">
             <h1 class="title">Kontakt</h1>
             <div class="flex-container">
                 <div class="text-box">
@@ -145,7 +151,7 @@
                     <p>Here we need icons and info for location and contacts</p>
                 </div>
                 <div class="map">
-                    <p>Here we need a Google Map of the location</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35535.82750330367!2d10.07013845499174!3d56.174579209905346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464c7316af7fc8d9%3A0xb949c5eb5be7b5dc!2sOutdoor%20Games!5e0!3m2!1sda!2sdk!4v1670324262965!5m2!1sda!2sdk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </section>
@@ -153,28 +159,29 @@
     <footer>
         <div class="flex-container">
             <div>
-                <h1>Lorem.</h1>
-                <a href="#">Link</a> <br>
-                <a href="#">Link</a> <br>
-                <a href="#">Link</a>
+                <h1>Adresse</h1>
+                <a href="https://goo.gl/maps/pzYzeqPHvcCLdt2K9">Glamhøjvej 30 <br> 8220 Brabrand </a>
             </div>
             <div>
-                <h1>Lorem.</h1>
-                <a href="#">Link</a> <br>
-                <a href="#">Link</a> <br>
-                <a href="#">Link</a>
+                <h1>Åbningstider</h1>
+                <p href="#">Søn-tor: 13-17</p>
+                <p href="#">Fre-lør: 13-19</p>
             </div>
             <div>
-                <h1>Lorem.</h1>
-                <a href="#">Link</a> <br>
-                <a href="#">Link</a> <br>
-                <a href="#">Link</a>
+                <h1>Kontakt</h1>
+                <a href="mailto:info@odg.dk">info@odg.dk</a> <br>
+                <a href="callto:61706107">61 70 61 07</a>
             </div>
             <div>
-                <h1>Lorem.</h1>
-                <a href="#">Link</a> <br>
-                <a href="#">Link</a> <br>
-                <a href="#">Link</a>
+                <h1>Følg os</h1>
+                <div class="socials">
+                    <img src="/images/icons/Facebook.svg" width="20" height="20" alt="Facebook Icon">
+                    <a href="#">Facebook</a>
+                </div>
+                <div class="socials">
+                    <img src="/images/icons/Instagram.svg" width="20" height="20" alt="Instagram Icon">
+                    <a href="#">Instagram</a>
+                </div>
             </div>
         </div>
     </footer>

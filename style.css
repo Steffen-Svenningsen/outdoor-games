@@ -16,6 +16,7 @@
 html {
     font-size: 16px;
     box-sizing: border-box;
+    scroll-behavior: smooth;
   }
   
 *, *:before, *:after {
@@ -30,6 +31,10 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   
 ol, ul {
     list-style: none;
+}
+
+a {
+    text-decoration: none;
 }
   
 img {
@@ -134,7 +139,6 @@ header nav a {
     transition: 0.2s;
     font-weight: 500;
     font-family: 'Montserrat', sans-serif;
-    text-decoration: none;
 }
 
 header nav a:hover {
@@ -213,22 +217,40 @@ main {
     border-radius: 6px;
 }
 
+.contact .map iframe {
+    border-radius: 10px;
+}
+
 footer {
     width: 100%;
     height: auto;
     margin-top: 100px;
 }
 
+footer .flex-container div {
+    width: 184px;
+}
+
 footer h1 {
     margin-bottom: 1.5rem;
 }
 
+footer p {
+    line-height: 1.8;
+}
+
 footer a {
-    text-decoration: none;
     color: var(--text);
+    transition: 0.2s;
     line-height: 1.8;
     font-family: 'Montserrat', sans-serif;
-    transition: 0.2s;
+}
+
+footer .socials {
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 footer a:hover {
