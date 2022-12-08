@@ -90,7 +90,49 @@
         </section>
         <section class="customers">
             <h1 class="title">Hvad vores kunder siger</h1>
-            <h4 class="center">Here we need a slider with slider.js too show the quotes from the customers</h4>
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="slide-content">
+                            <h3>"Super fed oplevelse. Vildt gode instruktører!"</h3>
+                            <div class="avatar">
+                                <img src="/images/Image-Placeholder.webp" width="140" height="140" alt="Avatar Customer">
+                            </div>
+                            <p class="customer-name">Jacob</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-content">
+                            <h3>"Den bedste dag med drengene. Vil klart anbefale!"</h3>
+                            <div class="avatar">
+                                <img src="/images/Image-Placeholder.webp" width="140" height="140" alt="Avatar Customer">
+                            </div>
+                            <p class="customer-name">Anders</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-content">
+                            <h3>"Fedt sted. Vildt hyggelige omgivelser og gode folk!"</h3>
+                            <div class="avatar">
+                                <img src="/images/Image-Placeholder.webp" width="140" height="140" alt="Avatar Customer">
+                            </div>
+                            <p class="customer-name">Mikkel</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
         </section>
         <section class="events">
             <h1 class="title">Events</h1>
@@ -199,7 +241,7 @@
             </div>
         </div>
     </footer>
-    <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

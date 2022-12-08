@@ -169,6 +169,41 @@ main {
     font-size: clamp(2rem, 5vw, 4rem);
 }
 
+.activities .card .card-content p {
+    /* Smaller height for the cards on the main page to beautify the look of the card relative to the text */
+    height: 60px;
+}
+
+.customers {
+    margin-top: 140px;
+    margin-bottom: 140px;
+}
+
+.customers h1 {
+    margin-bottom: 0;
+    transform: translateY(25px);
+}
+
+.customers .swiper {
+    max-width: 880px;
+    height: 400px;
+}
+
+.swiper-slide {
+    display: grid;
+    place-items: center;
+}
+
+.swiper-slide .slide-content {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.swiper-slide .slide-content .avatar {
+    margin-top: 3.5rem;
+    margin-bottom: 1rem;
+}
+
 .events .separator {
     height: 200px;
     width: 3px;
@@ -197,11 +232,6 @@ main {
 .card .card-content p {
     margin-top: 0.75rem;
     height: 130px;
-}
-
-.activities .card .card-content p {
-    /* Smaller height for the cards on the main page to beautify the look of the card relative to the text */
-    height: 60px;
 }
 
 .show-more {
