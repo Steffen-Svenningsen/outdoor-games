@@ -52,7 +52,8 @@ body p {
     font-family: 'Montserrat', sans-serif;
 }
 
-body h1 {
+body h1,
+body h2 {
     font-family: "Berlin", sans-serif;
 }
 
@@ -65,12 +66,16 @@ section {
     gap: 2rem;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: space-between;
 }
 
 .text-box {
     width: clamp(260px, 100%, 600px);
+}
+
+.text-box h2 {
+    margin-top: 1.65rem;
+    font-size: 1.375rem;
 }
 
 .text-box p {
@@ -126,6 +131,10 @@ section {
 header {
     width: 100%;
     height: auto;
+}
+
+header .flex-container {
+    align-items: center;
 }
 
 header nav {
@@ -416,6 +425,50 @@ main {
     font-style: italic;
 }
 
+/* Styling for event subpages | polterabend.html, firmaevent.html and blaamandag.html */
+.event-hero {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.event-hero-image {
+    background-image: url(/images/Image-Placeholder.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 100%;
+}
+
+.event-info .button-container {
+    margin-top: 35px;
+}
+
+.event-info .price-box {
+    padding: 1rem;
+    border: 1px solid var(--text);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.event-info .price-box h1,
+.event-info .price-box h3 {
+    text-decoration: underline;
+    margin-bottom: 1rem;
+}
+
+.event-info .price-box ul {
+    padding-left: 1rem;
+}
+
+.event-info .price-box ul li {
+    list-style: circle;
+    line-height: 1.4;
+}
+
+.event-info .price-box p {
+    margin-top: 1rem;
+    margin-bottom: 1.25rem;
+}
 
 /* Styling for the footer */
 footer {
