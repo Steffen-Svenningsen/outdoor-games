@@ -42,6 +42,11 @@ img {
     max-width: 100%;
 }
 
+video {
+    height: auto;
+    max-width: 100%;
+}
+
 body {
     color: var(--text);
     padding: 2rem;
@@ -124,7 +129,7 @@ section {
 }
 
 .ghost-button {
-    border: 1px solid var(--text);
+    background-color: #414833;
 }
 
 /* Styling for the header */
@@ -135,7 +140,7 @@ header {
     top: 0;
     box-sizing: border-box;
     left: 0;
-    padding: 2rem;
+    padding: 1.25rem 2rem;
     background: var(--background);
     z-index: 1000;
 }
@@ -289,6 +294,17 @@ main .hero {
     margin: 1rem;
     max-width: 300px;
     font-style: italic;
+}
+
+.swiper .swiper-pagination,
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+    color: #414833;
+}
+
+.swiper .swiper-pagination-bullet-active {
+    transform: scale(1.4);
+    background-color: #414833;
 }
 
 .google-rating {
@@ -451,7 +467,6 @@ main .hero {
 }
 
 /* Styling for omos.html page (about-page) */
-
 .author {
     font-style: italic;
 }
@@ -562,5 +577,16 @@ footer a:hover {
 
     header .hamburger {
         display: block;
+    }
+
+    .instructor .flex-container {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .swiper .swiper-button-prev,
+    .swiper .swiper-button-next {
+        display: none;
     }
 }
