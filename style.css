@@ -583,6 +583,31 @@ main .hero {
     justify-content: center;
 }
 
+.instructor .card .card-image {
+    height: 300px;
+    background-position: left;
+}
+
+.instructor .card .sebastian {
+    background-image: url(/images/sebastian.webp);
+}
+
+.instructor .card .kornum {
+    background-image: url(/images/kornum.webp);
+}
+
+.instructor .card .laura {
+    background-image: url(/images/laura.webp);
+}
+
+.instructor .card .henrik {
+    background-image: url(/images/henrik.webp);
+}
+
+.instructor .card .allan {
+    background-image: url(/images/allan.webp);
+}
+
 /* Styling for event subpages | polterabend.html, firmaevent.html and blaamandag.html */
 .subpage-hero {
     width: 100%;
