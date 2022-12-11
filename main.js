@@ -51,6 +51,16 @@ function toggleMenu() {
   }
 };
 
+// Scroll indicator | Progress bar
+window.onscroll = function() {scrollProgress()};
+
+function scrollProgress() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById('scrollBar').style.width = scrolled + "%";
+};
+
 // Configuration for swiper.js plugin to create the 'customer reviews slider'.
 const swiper = new Swiper('.swiper', {
     // Optional parameters
