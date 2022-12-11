@@ -426,12 +426,12 @@ main {
 }
 
 /* Styling for event subpages | polterabend.html, firmaevent.html and blaamandag.html */
-.event-hero {
+.subpage-hero {
     width: 100%;
     margin-top: 40px;
 }
 
-.event-hero-image {
+.subpage-hero-image {
     background-image: url(/images/Image-Placeholder.webp);
     background-position: center;
     background-size: cover;
@@ -440,18 +440,14 @@ main {
     width: 100%;
 }
 
-.event-info .button-container {
-    margin-top: 35px;
-}
-
-.event-info .price-box {
+.price-box {
     padding: 1rem;
     border: 1px solid var(--text);
     font-family: 'Montserrat', sans-serif;
 }
 
-.event-info .price-box h1,
-.event-info .price-box h3 {
+.price-box h1,
+.price-box h3 {
     text-decoration: underline;
     margin-bottom: 1rem;
 }
@@ -465,7 +461,7 @@ main {
     line-height: 1.4;
 }
 
-.event-info .price-box p {
+.price-box p {
     margin-top: 1rem;
     margin-bottom: 1.25rem;
 }
