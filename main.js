@@ -1,8 +1,10 @@
+// "Import" the elements we need to access the dropdown and store them as constants (variables)
 const activityMenu = document.getElementById('activityDropdown');
 const eventMenu = document.getElementById('eventDropdown');
 const activityLink = document.getElementById('activityLink');
 const eventLink = document.getElementById('eventLink');
 
+// Event listener function to either show og hide the elements
 activityLink.addEventListener('mouseover', function() {
   activityMenu.style.display = "flex";
 });
@@ -34,6 +36,20 @@ eventMenu.addEventListener('mouseleave', function() {
 eventLink.addEventListener('mouseleave', function() {
   eventMenu.style.display = "none";
 });
+
+// Hamburger menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+
+mobileMenu.style.display = "none";
+
+function toggleMenu() {
+  if(mobileMenu.style.display === "none") {
+    mobileMenu.style.display = "flex";
+  } else {
+    mobileMenu.style.display = "none";
+  }
+};
 
 // Configuration for swiper.js plugin to create the 'customer reviews slider'.
 const swiper = new Swiper('.swiper', {

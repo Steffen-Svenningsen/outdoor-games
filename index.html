@@ -36,8 +36,15 @@
                     <a href="/blaamandag.html">Blå mandag</a>
                 </div>
             </nav>
-            <button class="hamburger">
+            <button onclick="toggleMenu()" id="hamburger" class="hamburger">
             </button>
+        </div>
+        <div id="mobileMenu" class="mobile-menu">
+            <a href="/aktiviteter.html">Aktiviteter</a>
+            <a href="/events.html">Events</a>
+            <a href="/priser.html">Priser</a>
+            <a href="/omos.html">Om os</a>
+            <a href="/booking.html">Book</a>
         </div>
     </header>
     <main>
@@ -62,9 +69,7 @@
             <h1 class="title">Aktiviteter</h1>
             <div class="flex-container">
                 <div class="card">
-                    <div class="card-image">
-                        <img src="/images/Image-Placeholder.webp" height="200" alt="Image Placeholder">
-                    </div>
+                    <div class="card-image paintball-hero"></div>
                     <div class="card-content">
                         <h1>Paintball</h1>
                         <p>Kæmp mod dine venner på en af vores fem flotte udendørs paintball baner.</p>
@@ -75,9 +80,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-image">
-                        <img src="/images/Image-Placeholder.webp"  height="200" alt="Image Placeholder">
-                    </div>
+                    <div class="card-image promillehockey-hero"></div>
                     <div class="card-content">
                         <h1>Promille hockey</h1>
                         <p>Sjov udendørs aktivitet, hvor et par briller gør spillet lidt sværere.</p>
@@ -88,9 +91,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-image">
-                        <img src="/images/Image-Placeholder.webp" height="200" alt="Image Placeholder">
-                    </div>
+                    <div class="card-image bumperball-hero"></div>
                     <div class="card-content">
                         <h1>Bumper ball</h1>
                         <p>Spil bumper-ball på vores udendørs bane og skub dine venner i græsset.</p>
@@ -208,7 +209,7 @@
             <h1 class="title">Events</h1>
             <div class="flex-container">
                 <div class="image-container">
-                    <img src="/images/Image-Placeholder.webp" width="400" height="266" alt="Image Placeholder">
+                    <img src="/images/polterabend.webp" width="400" height="266" alt="Image Placeholder">
                 </div>
                 <div class="separator"></div>
                 <div class="text-box">
@@ -253,7 +254,7 @@
         </section>
         <section class="video">
             <div class="video-placeholder">
-                <video controls>
+                <video poster="/images/poster.webp" controls>
                     <source src="/video/promotion-video.mp4">
                 </video>
             </div>
@@ -279,7 +280,7 @@
                     </div>
                 </div>
                 <div class="map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35535.82750330367!2d10.07013845499174!3d56.174579209905346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464c7316af7fc8d9%3A0xb949c5eb5be7b5dc!2sOutdoor%20Games!5e0!3m2!1sda!2sdk!4v1670324262965!5m2!1sda!2sdk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35535.82750330367!2d10.07013845499174!3d56.174579209905346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464c7316af7fc8d9%3A0xb949c5eb5be7b5dc!2sOutdoor%20Games!5e0!3m2!1sda!2sdk!4v1670324262965!5m2!1sda!2sdk" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </section>
