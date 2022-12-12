@@ -419,6 +419,8 @@ main .hero .flex-container .text-box {
     border-radius: 8px;
     position: relative;
     height: 260px;
+    background-image: url(images/wave-haikei.svg);
+    background-repeat: no-repeat;
 }
 
 .swiper-slide .slide-content .quote-icon {
