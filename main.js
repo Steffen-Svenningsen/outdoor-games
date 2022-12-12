@@ -47,27 +47,37 @@ eventLink.addEventListener('mouseleave', function() {
 
 // Hamburger menu
 const mobileMenu = document.getElementById('mobileMenu');
+const lineTwo = document.getElementById('h-line-two');
+const lineThree = document.getElementById('h-line-three');
 
 mobileMenu.style.display = "none";
 
 function toggleMenu() {
   if(mobileMenu.style.display === "none") {
     mobileMenu.style.display = "flex";
+    lineTwo.style.animation = "widthChange 0.5s forwards"
+    lineThree.style.animation = "fadeOut 1s forwards";
   } else {
     mobileMenu.style.display = "none";
+    lineTwo.style.animation = "widthChangeBack 0.5s forwards"
+    lineThree.style.animation = "fadeBack 0.5s forwards"
   }
 };
 
 // Toggle more activities
 const newActivities = document.getElementById('toggleActivities');
+const showMoreBtn = document.getElementById('showMoreBtn');
 
 newActivities.style.display = "none";
+showMoreBtn.innerHTML = "Vis flere";
 
 function toggleMore() {
   if(newActivities.style.display === "none") {
     newActivities.style.display = "flex";
+    showMoreBtn.innerHTML = "Vis mindre";
   } else {
     newActivities.style.display = "none";
+    showMoreBtn.innerHTML = "Vis flere";
   }
 };
 
