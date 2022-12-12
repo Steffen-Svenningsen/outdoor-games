@@ -7,38 +7,45 @@ const eventLink = document.getElementById('eventLink');
 // Event listener function to either show og hide the elements
 activityLink.addEventListener('mouseover', function() {
   activityMenu.style.display = "flex";
+  activityLink.style.backgroundColor = "var(--background)";
 });
 
 activityMenu.addEventListener('mouseover', function() {
   activityMenu.style.display = "flex";
+  activityLink.style.backgroundColor = "var(--background)";
 });
 
 activityMenu.addEventListener('mouseleave', function() {
   activityMenu.style.display = "none";
+  activityLink.style.backgroundColor = "transparent";
 });
 
 activityLink.addEventListener('mouseleave', function() {
   activityMenu.style.display = "none";
+  activityLink.style.backgroundColor = "transparent";
 });
 
 eventLink.addEventListener('mouseover', function() {
   eventMenu.style.display = "flex";
+  eventLink.style.backgroundColor = "var(--background)"
 });
 
 eventMenu.addEventListener('mouseover', function() {
   eventMenu.style.display = "flex";
+  eventLink.style.backgroundColor = "var(--background)"
 });
 
 eventMenu.addEventListener('mouseleave', function() {
   eventMenu.style.display = "none";
+  eventLink.style.backgroundColor = "transparent"
 });
 
 eventLink.addEventListener('mouseleave', function() {
   eventMenu.style.display = "none";
+  eventLink.style.backgroundColor = "transparent"
 });
 
 // Hamburger menu
-const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 
 mobileMenu.style.display = "none";
@@ -48,6 +55,19 @@ function toggleMenu() {
     mobileMenu.style.display = "flex";
   } else {
     mobileMenu.style.display = "none";
+  }
+};
+
+// Toggle more activities
+const newActivities = document.getElementById('toggleActivities');
+
+newActivities.style.display = "none";
+
+function toggleMore() {
+  if(newActivities.style.display === "none") {
+    newActivities.style.display = "flex";
+  } else {
+    newActivities.style.display = "none";
   }
 };
 
@@ -66,6 +86,7 @@ const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
+    spaceBetween: 100,
   
     // If we need pagination
     pagination: {

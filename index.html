@@ -17,8 +17,8 @@
                 <img src="/images/logo/Logo.webp" width="60" height="44" alt="Outdoor Games Logo">
             </a>
             <nav>
-                <a id="activityLink" href="/aktiviteter.html">Aktiviteter</a>
-                <a id="eventLink" href="/events.html">Events</a>
+                <a id="activityLink" href="/aktiviteter.html">Aktiviteter<img class="dropdown-arrow" id="dropdownArrowOne" src="/images/icons/down-arrow.svg" width="12px" height="10px" alt="Dropdown arrow"></a>
+                <a id="eventLink" href="/events.html">Events<img class="dropdown-arrow" id="dropdownArrowTwo" src="/images/icons/down-arrow.svg" width="12px" height="10px" alt="Dropdown arrow"></a>
                 <a href="/priser.html">Priser</a>
                 <a href="/omos.html">Om os</a>
                 <a id="bookBtn" class="cta-button" href="/booking.html">Book</a>
@@ -105,7 +105,42 @@
                     </div>
                 </div>
             </div>
-            <button class="show-more">Vis flere</button>
+            <div id="toggleActivities" class="flex-container">
+                <div class="card">
+                    <div class="card-image paintball-hero"></div>
+                    <div class="card-content">
+                        <h1>Paintball</h1>
+                        <p>Kæmp mod dine venner på en af vores fem flotte udendørs paintball baner.</p>
+                        <div class="button-container">
+                            <a href="/booking.html" class="cta-button">Book</a>
+                            <a href="/paintball.html" class="ghost-button">Læs mere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image promillehockey-hero"></div>
+                    <div class="card-content">
+                        <h1>Promille hockey</h1>
+                        <p>Sjov udendørs aktivitet, hvor et par briller gør spillet lidt sværere.</p>
+                        <div class="button-container">
+                            <a href="/booking.html" class="cta-button">Book</a>
+                            <a href="/promillehockey.html" class="ghost-button">Læs mere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image bumperball-hero"></div>
+                    <div class="card-content">
+                        <h1>Bumper ball</h1>
+                        <p>Spil bumper-ball på vores udendørs bane og skub dine venner i græsset.</p>
+                        <div class="button-container">
+                            <a href="/booking.html" class="cta-button">Book</a>
+                            <a href="/bumperball.html" class="ghost-button">Læs mere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button onclick="toggleMore()" class="show-more">Vis flere</button>
         </section>
         <section class="customers">
             <h1 class="title">Hvad vores kunder siger</h1>
@@ -120,7 +155,7 @@
                                 <img src="/images/icons/quote.svg" width="70" height="70" alt="Quote icon">
                             </div>
                             <div class="avatar">
-                                <img src="/images/Image-Placeholder.webp" width="140" height="140" alt="Avatar Customer">
+                                <img src="/images/jeppe.webp" width="140" height="140" alt="Avatar Customer">
                             </div>
                             <h3>"Fedeste dag med gutterne! Klart ikke sidste gang vi kommer her!"</h3>
                             <p class="customer-name">Jeppe</p>
@@ -135,7 +170,7 @@
                                 <img src="/images/icons/quote.svg" width="70" height="70" alt="Quote icon">
                             </div>
                             <div class="avatar">
-                                <img src="/images/Image-Placeholder.webp" width="140" height="140" alt="Avatar Customer">
+                                <img src="/images/simon.webp" width="140" height="140" alt="Avatar Customer">
                             </div>
                             <h3>"Virkelig en sjov dag, gode baner og super instruktør!"</h3>
                             <p class="customer-name">Simon</p>
@@ -150,7 +185,7 @@
                                 <img src="/images/icons/quote.svg" width="70" height="70" alt="Quote icon">
                             </div>
                             <div class="avatar">
-                                <img src="/images/Image-Placeholder.webp" width="140" height="140" alt="Avatar Customer">
+                                <img src="/images/emil.webp" width="140" height="140" alt="Avatar Customer">
                             </div>
                             <h3>"Vi blev virkelig taget godt imod! Super energi!"</h3>
                             <p class="customer-name">Emil</p>
@@ -165,7 +200,7 @@
                                 <img src="/images/icons/quote.svg" width="70" height="70" alt="Quote icon">
                             </div>
                             <div class="avatar">
-                                <img src="/images/Image-Placeholder.webp" width="140" height="140" alt="Avatar Customer">
+                                <img src="images/sebastian-review.webp" width="140" height="140" alt="Avatar Customer">
                             </div>
                             <h3>"Tak til Outdoor Games for en vanvittig fed dag!"</h3>
                             <p class="customer-name">Sebastian</p>
@@ -180,9 +215,9 @@
                                 <img src="/images/icons/quote.svg" width="70" height="70" alt="Quote icon">
                             </div>
                             <div class="avatar">
-                                <img src="/images/Image-Placeholder.webp" width="140" height="140" alt="Avatar Customer">
+                                <img src="/images/mathias.webp" width="140" height="140" alt="Avatar Customer">
                             </div>
-                            <h3>"God stemning og super passioneret instruktør! Stedet kan varmt anbefales!"</h3>
+                            <h3>"God stemning og super instruktør! Stedet kan varmt anbefales!"</h3>
                             <p class="customer-name">Mathias</p>
                             <div class="quote-icon">
                                 <img src="/images/icons/quote.svg" width="70" height="70" alt="Quote icon">
@@ -212,7 +247,7 @@
             <h1 class="title">Events</h1>
             <div class="flex-container">
                 <div class="image-container">
-                    <img src="/images/polterabend.webp" width="400" height="266" alt="Image Placeholder">
+                    <img src="/images/polterabend.webp" width="400" height="266" alt="Polterabend">
                 </div>
                 <div class="separator"></div>
                 <div class="text-box">
