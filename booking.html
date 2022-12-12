@@ -16,8 +16,8 @@
                 <img src="/images/logo/Logo.webp" width="60" height="44" alt="Outdoor Games Logo">
             </a>
             <nav>
-                <a id="activityLink" href="/aktiviteter.html">Aktiviteter</a>
-                <a id="eventLink" href="/events.html">Events</a>
+                <a id="activityLink" href="/aktiviteter.html">Aktiviteter<img class="dropdown-arrow" id="dropdownArrowOne" src="/images/icons/down-arrow.svg" width="12px" height="10px" alt="Dropdown arrow"></a>
+                <a id="eventLink" href="/events.html">Events<img class="dropdown-arrow" id="dropdownArrowTwo" src="/images/icons/down-arrow.svg" width="12px" height="10px" alt="Dropdown arrow"></a>
                 <a href="/priser.html">Priser</a>
                 <a href="/omos.html">Om os</a>
                 <a id="bookBtn" class="cta-button" href="/booking.html">Book</a>
@@ -36,6 +36,9 @@
                 </div>
             </nav>
             <button onclick="toggleMenu()" id="hamburger" class="hamburger">
+                <div id="h-line-one" class="h-line"></div>
+                <div id="h-line-two" class="h-line"></div>
+                <div id="h-line-three" class="h-line"></div>
             </button>
         </div>
         <div id="mobileMenu" class="mobile-menu">
@@ -45,10 +48,7 @@
             <a href="/omos.html">Om os</a>
             <a href="/booking.html">Book</a>
         </div>
-        <div class="scroll-container">
-            <div id="scrollBar" class="scroll-progress"></div>
-        </div>
-        </div>
+        <div id="scrollBar" class="scroll-progress"></div>
     </header>
     <main>
         <h1>Main content</h1>

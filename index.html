@@ -37,6 +37,9 @@
                 </div>
             </nav>
             <button onclick="toggleMenu()" id="hamburger" class="hamburger">
+                <div id="h-line-one" class="h-line"></div>
+                <div id="h-line-two" class="h-line"></div>
+                <div id="h-line-three" class="h-line"></div>
             </button>
         </div>
         <div id="mobileMenu" class="mobile-menu">
@@ -46,9 +49,7 @@
             <a href="/omos.html">Om os</a>
             <a href="/booking.html">Book</a>
         </div>
-        <div class="scroll-container">
-            <div id="scrollBar" class="scroll-progress"></div>
-        </div>
+        <div id="scrollBar" class="scroll-progress"></div>
     </header>
     <main>
         <section class="hero">
@@ -140,7 +141,7 @@
                     </div>
                 </div>
             </div>
-            <button onclick="toggleMore()" class="show-more">Vis flere</button>
+            <button onclick="toggleMore()" id="showMoreBtn" class="show-more"></button>
         </section>
         <section class="customers">
             <h1 class="title">Hvad vores kunder siger</h1>
