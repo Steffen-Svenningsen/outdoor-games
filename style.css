@@ -942,6 +942,19 @@ main .hero .flex-container .text-box {
 .booking-section fieldset legend {
     font-family: 'Berlin', sans-serif;
     font-size: 1.65rem;
+    position: relative;
+    z-index: 2;
+}
+
+.booking-section fieldset legend::before {
+    content: '';
+    position: absolute;
+    width: 211px;
+    height: 2px;
+    background-color: var(--background);
+    top: 14px;
+    left: 0;
+    z-index: -1;
 }
 
 .booking-section .flex-container .custom-select,
