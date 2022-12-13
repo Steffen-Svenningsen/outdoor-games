@@ -51,7 +51,73 @@
         <div id="scrollBar" class="scroll-progress"></div>
     </header>
     <main>
-        <h1>Main content</h1>
+        <section class="booking-section">
+            <h1 class="title">Book en tid</h1>
+            <form>
+                <fieldset class="flex-container">
+                    <legend>Book en sjov dag!</legend>
+                    <div class="custom-input">
+                        <h3>Fulde navn</h3>
+                        <input type="text" placeholder="Erik Jensen" required oninvalid="this.setCustomValidity('Skriv dit navn')" oninput="this.setCustomValidity('')">
+                    </div>
+                    <div class="custom-input">
+                        <h3>Email</h3>
+                        <input type="text" placeholder="erik@gmail.com" required oninvalid="this.setCustomValidity('Skriv din email')" oninput="this.setCustomValidity('')">
+                    </div>
+                    <div class="custom-select">
+                        <h3>Aktvitiet</h3>
+                        <select name="aktiviteter" id="aktiviteter" required oninvalid="this.setCustomValidity('Vælg en aktivitet')" oninput="this.setCustomValidity('')">
+                            <option value="" disabled selected hidden>Vælg en aktivitet</option>
+                            <option value="Paintball">Paintball</option>
+                            <option value="Bumperball">Bumperball</option>
+                            <option value="Bazookaball">Bazookaball</option>
+                            <option value="Sumo stafet">Sumo stafet</option>
+                            <option value="Bue battle">Bue battle</option>
+                            <option value="Promille hockey">Promille hockey</option>
+                        </select>
+                    </div>
+                    <div class="custom-input">
+                        <h3>Antal personer</h3>
+                        <input type="number" placeholder="8" required oninvalid="this.setCustomValidity('Vælg hvor mange personer i bliver')" oninput="this.setCustomValidity('')">
+                    </div>
+                    <div class="custom-select">
+                        <h3>Hvilken dato?</h3>
+                        <select name="date" id="date" required oninvalid="this.setCustomValidity('Vælg en dato')" oninput="this.setCustomValidity('')">
+                            <option value="" disabled selected hidden>Vælg en dato</option>
+                            <option value="first-choice"></option>
+                            <option value="second-choice"></option>
+                            <option value="third-choice"></option>
+                            <option value="fourth-choice"></option>
+                            <option value="fifth-choice"></option>
+                            <option value="last-choice"></option>
+                        </select>
+                    </div>
+                    <div class="custom-select">
+                        <h3>Tidspunkt</h3>
+                        <select name="tidspunkt" id="tidspunkt" required oninvalid="this.setCustomValidity('Vælg et tidspunkt')" oninput="this.setCustomValidity('')">
+                            <option value="9">9.00</option>
+                            <option value="10">10.00</option>
+                            <option value="11">11.00</option>
+                            <option value="12">12.00</option>
+                            <option value="13">13.00</option>
+                            <option value="14">14.00</option>
+                            <option value="15">15.00</option>
+                            <option value="16">16.00</option>
+                            <option value="17">17.00</option>
+                            <option value="18">18.00</option>
+                        </select>
+                    </div>
+                    <div class="button-container">
+                        <button type="submit" class="cta-button">Book</button>
+                    </div>
+                </fieldset>
+            </form>
+            <div class="calendar-container">
+                <div class="calendar" id="calendar">
+                    <iframe src="https://embed.styledcalendar.com/#Am8kCQvsotAaxohHhxjt" title="Styled Calendar" class="styled-calendar-container" style="width: 100%; border: none;" data-cy="calendar-embed-iframe"></iframe>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <div class="flex-container">
@@ -82,6 +148,7 @@
             </div>
         </div>
     </footer>
+    <script async type="module" src="https://embed.styledcalendar.com/assets/parent-window.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
