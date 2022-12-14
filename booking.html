@@ -7,6 +7,7 @@
     <meta name="description" content="Book tid til en aktivitet hos Outdoor Games før din nabo!">
     <meta name="keywords" content="Outdoor, Games, Sjov, Leg, Book, Booking, Aktiviteter, Paintball, Bazookaball, Buebattle, Sumo-stafet,Promille-hockey, Bumperball">
     <title>Outdoor Games | Booking</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -53,20 +54,20 @@
     <main>
         <section class="booking-section">
             <h1 class="title">Book en tid</h1>
-            <form>
+            <form action="https://getform.io/f/db5ec22e-4c78-4b8d-8559-641b80d665d1" method="POST">
                 <fieldset class="flex-container">
                     <legend>Book en sjov dag!</legend>
                     <div class="custom-input">
-                        <h3>Fulde navn</h3>
-                        <input type="text" placeholder="Erik Jensen" required oninvalid="this.setCustomValidity('Skriv dit navn')" oninput="this.setCustomValidity('')">
+                        <h3>Dit navn</h3>
+                        <input id="fullName" type="text" name="Navn" placeholder="Erik Jensen" required oninvalid="this.setCustomValidity('Skriv dit navn')" oninput="this.setCustomValidity('')">
                     </div>
                     <div class="custom-input">
-                        <h3>Email</h3>
-                        <input type="text" placeholder="erik@gmail.com" required oninvalid="this.setCustomValidity('Skriv din email')" oninput="this.setCustomValidity('')">
+                        <h3>Din email</h3>
+                        <input id="emailId" type="email" name="Email" placeholder="erik@gmail.com" required oninvalid="this.setCustomValidity('Skriv din email')" oninput="this.setCustomValidity('')">
                     </div>
                     <div class="custom-select">
-                        <h3>Aktvitiet</h3>
-                        <select name="aktiviteter" id="aktiviteter" required oninvalid="this.setCustomValidity('Vælg en aktivitet')" oninput="this.setCustomValidity('')">
+                        <h3>Aktivitet</h3>
+                        <select name="Aktivitet" id="aktivitet" required oninvalid="this.setCustomValidity('Vælg en aktivitet')" oninput="this.setCustomValidity('')">
                             <option value="" disabled selected hidden>Vælg en aktivitet</option>
                             <option value="Paintball">Paintball</option>
                             <option value="Bumperball">Bumperball</option>
@@ -78,34 +79,11 @@
                     </div>
                     <div class="custom-input">
                         <h3>Antal personer</h3>
-                        <input type="number" placeholder="8" required oninvalid="this.setCustomValidity('Vælg hvor mange personer i bliver')" oninput="this.setCustomValidity('')">
+                        <input id="numberOfPeople" name="Antal" type="number" placeholder="8" required oninvalid="this.setCustomValidity('Vælg hvor mange personer i bliver')" oninput="this.setCustomValidity('')">
                     </div>
-                    <div class="custom-select">
-                        <h3>Hvilken dato?</h3>
-                        <select name="date" id="date" required oninvalid="this.setCustomValidity('Vælg en dato')" oninput="this.setCustomValidity('')">
-                            <option value="" disabled selected hidden>Vælg en dato</option>
-                            <option value="first-choice"></option>
-                            <option value="second-choice"></option>
-                            <option value="third-choice"></option>
-                            <option value="fourth-choice"></option>
-                            <option value="fifth-choice"></option>
-                            <option value="last-choice"></option>
-                        </select>
-                    </div>
-                    <div class="custom-select">
-                        <h3>Tidspunkt</h3>
-                        <select name="tidspunkt" id="tidspunkt" required oninvalid="this.setCustomValidity('Vælg et tidspunkt')" oninput="this.setCustomValidity('')">
-                            <option value="9">9.00</option>
-                            <option value="10">10.00</option>
-                            <option value="11">11.00</option>
-                            <option value="12">12.00</option>
-                            <option value="13">13.00</option>
-                            <option value="14">14.00</option>
-                            <option value="15">15.00</option>
-                            <option value="16">16.00</option>
-                            <option value="17">17.00</option>
-                            <option value="18">18.00</option>
-                        </select>
+                    <div class="custom-input">
+                        <h3>Tid & dato</h3>
+                        <input class="dato" name="Dato" type="date" id="dato" required oninvalid="this.setCustomValidity('Vælg en dato')" oninput="this.setCustomValidity('')">
                     </div>
                     <div class="button-container">
                         <button type="submit" class="cta-button">Book</button>
@@ -148,7 +126,11 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/da.js"></script>
     <script async type="module" src="https://embed.styledcalendar.com/assets/parent-window.js"></script>
+    <script src="booking.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

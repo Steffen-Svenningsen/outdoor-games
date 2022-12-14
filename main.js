@@ -68,18 +68,20 @@ function toggleMenu() {
 const newActivities = document.getElementById('toggleActivities');
 const showMoreBtn = document.getElementById('showMoreBtn');
 
-newActivities.style.display = "none";
-showMoreBtn.innerHTML = "Vis flere";
+if(newActivities) {
+  newActivities.style.display = "none";
+  showMoreBtn.innerHTML = "Vis flere";
 
-function toggleMore() {
-  if(newActivities.style.display === "none") {
-    newActivities.style.display = "flex";
-    showMoreBtn.innerHTML = "Vis mindre";
-  } else {
-    newActivities.style.display = "none";
-    showMoreBtn.innerHTML = "Vis flere";
-  }
-};
+  function toggleMore() {
+    if(newActivities.style.display === "none") {
+      newActivities.style.display = "flex";
+      showMoreBtn.innerHTML = "Vis mindre";
+    } else {
+      newActivities.style.display = "none";
+      showMoreBtn.innerHTML = "Vis flere";
+    }
+  };
+}
 
 // Scroll indicator | Progress bar
 window.onscroll = function() {scrollProgress()};
@@ -115,3 +117,20 @@ const swiper = new Swiper('.swiper', {
         disableOnInteraction: false,
     },
 });
+
+// Get the video element from the DOM
+var promoVideo = document.getElementById("video")
+
+// Event listener that listen for a scroll event on the window
+window.addEventListener("scroll", function() {
+  if (elFullyVisible(promoVideo)) {
+    promoVideo.play();
+  } else {
+    promoVideo.pause();
+  }
+});
+
+// Autoplay on the video when scrolled into the users viewport
+function elFullyVisible(el) {
+  return (el.getBoundingClientRect().top >= 0 && el.getBoundingClientRect().bottom < window.innerHeight);
+}

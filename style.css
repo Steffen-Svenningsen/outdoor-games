@@ -47,7 +47,7 @@ img {
 
 video {
     height: auto;
-    max-width: 100%;
+    width: 100%;
 }
 
 body {
@@ -87,13 +87,21 @@ footer {
     width: clamp(260px, 100%, 680px);
 }
 
+.text-box h1 {
+    font-size: 2rem;
+}
+
 .text-box h2 {
     margin-top: 1.65rem;
-    font-size: 1.375rem;
+    font-size: 1.25rem;
 }
 
 .text-box p {
     margin-top: 1rem;
+}
+
+.text-box p span {
+    font-weight: bold;
 }
 
 .center {
@@ -381,6 +389,31 @@ main .hero .flex-container .text-box {
     font-size: clamp(2rem, 5vw, 4rem);
 }
 
+
+.hero .image-container .hero-image {
+    /* Flips image horizontal */
+    transform: scaleX(-1);
+    border-radius: 8px;
+}
+
+.hero .image-container {
+    position: relative;
+}
+
+.hero .image-container::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border: 1px solid var(--text);
+    transform: translate(-12px, -12px);
+    background-color: var(--shadow);
+    border-radius: 8px;
+}
+
 .activities .card .card-content p {
     /* Smaller height for the cards on the main page to beautify the look of the card relative to the text */
     height: 60px;
@@ -574,6 +607,42 @@ main .hero .flex-container .text-box {
 
 .show-more:hover {
     box-shadow: 6px 4px 6px rgba(0, 0, 0, 0.20);
+}
+
+.video-container {
+    width: 80%;
+    height: max-content;
+    margin: 0 auto;
+    position: relative;
+}
+
+.video-container::before,
+.video-container::after {
+    content: '';
+    position: absolute;
+    background-color: var(--shadow);
+    width: 50%;
+    height: 50%;
+    z-index: -1;
+    border-radius: 8px;
+    border: 1px solid var(--text);
+}
+
+.video-container::before {
+    top: 0;
+    left: 0;
+    transform: translate(-24px, -24px);
+}
+
+.video-container::after {
+    bottom: 0;
+    right: 0;
+    transform: translate(24px, 20px);
+}
+
+.video-container video {
+    border-radius: 8px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.20);
 }
 
 .contact .info-container {
@@ -837,11 +906,13 @@ main .hero .flex-container .text-box {
 }
 
 .price-box {
-    padding: 4rem;
+    padding: 3rem;
     border: 1px solid var(--text);
     font-family: 'Montserrat', sans-serif;
     background-color: var(--shadow);
     position: relative;
+    height: fit-content;
+    width: clamp(220px, 100%, 400px);
 }
 
 .price-box::after {
@@ -884,7 +955,7 @@ main .hero .flex-container .text-box {
 }
 
 .bazookaball-hero {
-    background-image: url(/images/bazooka.webp);
+    background-image: url(/images/bazooka-ball-hero.webp);
 }
 
 .buebattle-hero {
@@ -896,7 +967,7 @@ main .hero .flex-container .text-box {
 }
 
 .firmaevent-hero {
-    background-image: url(/images/Image-Placeholder.webp);
+    background-image: url(/images/firmaevent.webp);
 }
 
 .polterabend-hero {
@@ -909,10 +980,11 @@ main .hero .flex-container .text-box {
 
 .sumostafet-hero {
     background-image: url(/images/sumo.webp);
+    background-position: top;
 }
 
 .blaamandag-hero {
-    background-image: url(/images/Image-Placeholder.webp);
+    background-image: url(/images/blaa-mandag.webp);
 }
 
 /* Styling for booking.html */
