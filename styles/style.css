@@ -596,6 +596,10 @@ main .hero .flex-container .text-box {
     width: 100%;
 }
 
+#toggleActivities .sumostafet-hero {
+    background-position: top;
+}
+
 .card .card-content {
     padding: 1rem;
     background-color: var(--shadow);
@@ -969,41 +973,41 @@ main .hero .flex-container .text-box {
 }
 
 /* Background hero section images for all subpages | Paintball.html, polterabend.html etc. */
-.card .paintball-hero {
+.paintball-hero {
     background-image: url('../images/paintball-hero.webp');
 }
 
-.card .bazookaball-hero {
+.bazookaball-hero {
     background-image: url('../images/bazooka-ball-hero.webp');
 }
 
-.card .buebattle-hero {
+.buebattle-hero {
     background-image: url('../images/buebattleimage.webp');
 }
 
-.card .bumperball-hero {
+.bumperball-hero {
     background-image: url('../images/bumperball.webp');
 }
 
-.card .firmaevent-hero {
+.firmaevent-hero {
     background-image: url('../images/firmaevent.webp');
     background-position: 65% 35%;
 }
 
-.card .polterabend-hero {
+.polterabend-hero {
     background-image: url('../images/polterabend.webp');
 }
 
-.card .promillehockey-hero {
+.promillehockey-hero {
     background-image: url('../images/Image-Placeholder.webp');
 }
 
-.card .sumostafet-hero {
+.sumostafet-hero {
     background-image: url('../images/sumo.webp');
     background-position: top;
 }
 
-.card .blaamandag-hero {
+.blaamandag-hero {
     background-image: url('../images/blaa-mandag.webp');
 }
 
