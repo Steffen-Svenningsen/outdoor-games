@@ -75,7 +75,7 @@ if (newActivities) {
     function toggleMore() {
         if (newActivities.style.display === "none") {
             newActivities.style.display = "flex";
-            showMoreBtn.innerHTML = "Vis mindre";
+            showMoreBtn.innerHTML = "Vis færre";
         } else {
             newActivities.style.display = "none";
             showMoreBtn.innerHTML = "Vis flere";
