@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Book tid til en aktivitet hos Outdoor Games før din nabo!">
-    <meta name="keywords" content="Outdoor, Games, Sjov, Leg, Book, Booking, Aktiviteter, Paintball, Bazookaball, Buebattle, Sumo-stafet,Promille-hockey, Bumperball">
+    <meta name="keywords"
+        content="Outdoor, Games, Sjov, Leg, Book, Booking, Aktiviteter, Paintball, Bazookaball, Buebattle, Sumo-stafet,Promille-hockey, Bumperball">
     <title>Outdoor Games | Booking</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
     <header>
         <div class="flex-container">
-            <a href="/" class="logo">
-                <img src="/images/logo/Logo.webp" width="60" height="44" alt="Outdoor Games Logo">
+            <a href="index.html" class="logo">
+                <img src="images/logo/Logo.webp" width="60" height="44" alt="Outdoor Games Logo">
             </a>
             <nav>
-                <a id="activityLink" href="/aktiviteter.html">Aktiviteter<img class="dropdown-arrow" id="dropdownArrowOne" src="/images/icons/down-arrow.svg" width="12px" height="10px" alt="Dropdown arrow"></a>
-                <a id="eventLink" href="/events.html">Events<img class="dropdown-arrow" id="dropdownArrowTwo" src="/images/icons/down-arrow.svg" width="12px" height="10px" alt="Dropdown arrow"></a>
-                <a href="/priser.html">Priser</a>
-                <a href="/omos.html">Om os</a>
-                <a id="bookBtn" class="cta-button" href="/booking.html">Book</a>
+                <a id="activityLink" href="aktiviteter.html">Aktiviteter<img class="dropdown-arrow"
+                        id="dropdownArrowOne" src="images/icons/down-arrow.svg" width="12px" height="10px"
+                        alt="Dropdown arrow"></a>
+                <a id="eventLink" href="events.html">Events<img class="dropdown-arrow" id="dropdownArrowTwo"
+                        src="images/icons/down-arrow.svg" width="12px" height="10px" alt="Dropdown arrow"></a>
+                <a href="priser.html">Priser</a>
+                <a href="omos.html">Om os</a>
+                <a id="bookBtn" class="cta-button" href="booking.html">Book</a>
                 <div id="activityDropdown" class="activity-dropdown">
-                    <a href="/paintball.html">Paintball</a>
+                    <a href="paintball.html">Paintball</a>
                     <a href="bumperball.html">Bumperball</a>
                     <a href="bazookaball.html">Bazookaball</a>
                     <a href="buebattle.html">Bue battle</a>
@@ -31,9 +37,9 @@
                     <a href="promillehockey.html">Promille hockey</a>
                 </div>
                 <div id="eventDropdown" class="event-dropdown">
-                    <a href="/polterabend.html">Polterabend</a>
-                    <a href="/firmaevent.html">Firmaevent</a>
-                    <a href="/blaamandag.html">Blå mandag</a>
+                    <a href="polterabend.html">Polterabend</a>
+                    <a href="firmaevent.html">Firmaevent</a>
+                    <a href="blaamandag.html">Blå mandag</a>
                 </div>
             </nav>
             <button onclick="toggleMenu()" id="hamburger" class="hamburger">
@@ -43,11 +49,11 @@
             </button>
         </div>
         <div id="mobileMenu" class="mobile-menu">
-            <a href="/aktiviteter.html">Aktiviteter</a>
-            <a href="/events.html">Events</a>
-            <a href="/priser.html">Priser</a>
-            <a href="/omos.html">Om os</a>
-            <a href="/booking.html">Book</a>
+            <a href="aktiviteter.html">Aktiviteter</a>
+            <a href="events.html">Events</a>
+            <a href="priser.html">Priser</a>
+            <a href="omos.html">Om os</a>
+            <a href="booking.html">Book</a>
         </div>
         <div id="scrollBar" class="scroll-progress"></div>
     </header>
@@ -59,15 +65,19 @@
                     <legend>Book en sjov dag!</legend>
                     <div class="custom-input">
                         <h3>Dit navn</h3>
-                        <input id="fullName" type="text" name="Navn" placeholder="Erik Jensen" required oninvalid="this.setCustomValidity('Skriv dit navn')" oninput="this.setCustomValidity('')">
+                        <input id="fullName" type="text" name="Navn" placeholder="Erik Jensen" required
+                            oninvalid="this.setCustomValidity('Skriv dit navn')" oninput="this.setCustomValidity('')">
                     </div>
                     <div class="custom-input">
                         <h3>Din email</h3>
-                        <input id="emailId" type="email" name="Email" placeholder="erik@gmail.com" required oninvalid="this.setCustomValidity('Skriv din email')" oninput="this.setCustomValidity('')">
+                        <input id="emailId" type="email" name="Email" placeholder="erik@gmail.com" required
+                            oninvalid="this.setCustomValidity('Skriv din email')" oninput="this.setCustomValidity('')">
                     </div>
                     <div class="custom-select">
                         <h3>Aktivitet</h3>
-                        <select name="Aktivitet" id="aktivitet" required oninvalid="this.setCustomValidity('Vælg en aktivitet')" oninput="this.setCustomValidity('')">
+                        <select name="Aktivitet" id="aktivitet" required
+                            oninvalid="this.setCustomValidity('Vælg en aktivitet')"
+                            oninput="this.setCustomValidity('')">
                             <option value="" disabled selected hidden>Vælg en aktivitet</option>
                             <option value="Paintball">Paintball</option>
                             <option value="Bumperball">Bumperball</option>
@@ -79,11 +89,14 @@
                     </div>
                     <div class="custom-input">
                         <h3>Antal personer</h3>
-                        <input id="numberOfPeople" name="Antal" type="number" placeholder="8" required oninvalid="this.setCustomValidity('Vælg hvor mange personer i bliver')" oninput="this.setCustomValidity('')">
+                        <input id="numberOfPeople" name="Antal" type="number" placeholder="8" required
+                            oninvalid="this.setCustomValidity('Vælg hvor mange personer i bliver')"
+                            oninput="this.setCustomValidity('')">
                     </div>
                     <div class="custom-input">
                         <h3>Tid & dato</h3>
-                        <input class="dato" name="Dato" type="date" id="dato" required oninvalid="this.setCustomValidity('Vælg en dato')" oninput="this.setCustomValidity('')">
+                        <input class="dato" name="Dato" type="date" id="dato" required
+                            oninvalid="this.setCustomValidity('Vælg en dato')" oninput="this.setCustomValidity('')">
                     </div>
                     <div class="button-container">
                         <button type="submit" class="cta-button">Book</button>
@@ -92,7 +105,9 @@
             </form>
             <div class="calendar-container">
                 <div class="calendar" id="calendar">
-                    <iframe src="https://embed.styledcalendar.com/#Am8kCQvsotAaxohHhxjt" title="Styled Calendar" class="styled-calendar-container" style="width: 100%; border: none;" data-cy="calendar-embed-iframe"></iframe>
+                    <iframe src="https://embed.styledcalendar.com/#Am8kCQvsotAaxohHhxjt" title="Styled Calendar"
+                        class="styled-calendar-container" style="width: 100%; border: none;"
+                        data-cy="calendar-embed-iframe"></iframe>
                 </div>
             </div>
         </section>
@@ -105,8 +120,7 @@
             </div>
             <div>
                 <h1>Åbningstider</h1>
-                <p href="#">Søn-tor: 13-17</p>
-                <p href="#">Fre-lør: 13-19</p>
+                <p>Hver dag: 09:00-19:00</p>
             </div>
             <div>
                 <h1>Kontakt</h1>
@@ -116,11 +130,11 @@
             <div>
                 <h1>Følg os</h1>
                 <div class="socials">
-                    <img src="/images/icons/Facebook.svg" width="20" height="20" alt="Facebook Icon">
+                    <img src="images/icons/Facebook.svg" width="20" height="20" alt="Facebook Icon">
                     <a href="#">Facebook</a>
                 </div>
                 <div class="socials">
-                    <img src="/images/icons/Instagram.svg" width="20" height="20" alt="Instagram Icon">
+                    <img src="images/icons/Instagram.svg" width="20" height="20" alt="Instagram Icon">
                     <a href="#">Instagram</a>
                 </div>
             </div>
@@ -130,7 +144,8 @@
     <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
     <script src="https://npmcdn.com/flatpickr/dist/l10n/da.js"></script>
     <script async type="module" src="https://embed.styledcalendar.com/assets/parent-window.js"></script>
-    <script src="booking.js"></script>
-    <script src="main.js"></script>
+    <script src="javascript/booking.js"></script>
+    <script src="javascript/main.js"></script>
 </body>
+
 </html>

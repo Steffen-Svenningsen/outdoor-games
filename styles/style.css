@@ -1,8 +1,9 @@
 /* Import fonts we need to display on the website */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
 @font-face {
     font-family: "Berlin";
-    src: url(./fonts/Berlin.ttf);
+    src: url(fonts/Berlin.ttf);
 }
 
 /* Root variables, so we don't have to write the hex color everytime */
@@ -20,26 +21,38 @@ html {
     font-size: 16px;
     box-sizing: border-box;
     scroll-behavior: smooth;
-  }
-  
-*, *:before, *:after {
+}
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
-  
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
     margin: 0;
     padding: 0;
     font-weight: normal;
 }
-  
-ol, ul {
+
+ol,
+ul {
     list-style: none;
 }
 
 a {
     text-decoration: none;
 }
-  
+
 img {
     height: auto;
     max-width: 100%;
@@ -171,6 +184,11 @@ header .flex-container {
     align-items: center;
 }
 
+header .logo img {
+    width: 75px;
+    height: auto;
+}
+
 header nav {
     display: flex;
     align-items: center;
@@ -233,7 +251,7 @@ header nav .event-dropdown::after {
     background-color: var(--shadow);
     border: 2px solid var(--cta-button);
     z-index: -1;
-    transform: translate(-6px,-20px);
+    transform: translate(-6px, -20px);
 }
 
 header nav .activity-dropdown a,
@@ -368,19 +386,20 @@ main .hero .flex-container .text-box {
 /* Animation for the 'gradient-text' span */
 @keyframes shinyFlow {
     from {
-      background-position: 0% center;
+        background-position: 0% center;
     }
 
     to {
-      background-position: -200% center;
+        background-position: -200% center;
     }
 }
 
 .hero .text-box .gradient-text {
     animation: shinyFlow 3s linear infinite;
-    background: linear-gradient(to right, var(--cta-button), #f5221b, #4a271F ,var(--cta-button));
+    background: linear-gradient(to right, var(--cta-button), #f5221b, #4a271F, var(--cta-button));
     background-size: 200%;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     white-space: nowrap;
 }
@@ -452,7 +471,7 @@ main .hero .flex-container .text-box {
     border-radius: 8px;
     position: relative;
     height: 260px;
-    background-image: url(images/wave-haikei.svg);
+    background-image: url('../images/wave-haikei.svg');
     background-repeat: no-repeat;
 }
 
@@ -518,7 +537,7 @@ main .hero .flex-container .text-box {
 }
 
 .google-rating .star-container .star:last-of-type {
-    background: linear-gradient(90deg, rgba(255,215,0,1) 50%, rgba(245,245,245,0) 50%, rgba(245,245,245,0) 100%);
+    background: linear-gradient(90deg, rgba(255, 215, 0, 1) 50%, rgba(245, 245, 245, 0) 50%, rgba(245, 245, 245, 0) 100%);
 }
 
 .google-rating p {
@@ -557,16 +576,16 @@ main .hero .flex-container .text-box {
 .card {
     width: clamp(280px, 30%, 500px);
     transition: 0.2s;
-    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.20);
-    -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.20);
-    -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.20);
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.20);
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.20);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.20);
 }
 
 .card:hover {
     transform: scale(1.025);
-    box-shadow: 0px 0px 18px 14px rgba(0,0,0,0.2);
-    -webkit-box-shadow: 0px 0px 18px 14px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0px 0px 18px 14px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 18px 14px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 0px 18px 14px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 18px 14px rgba(0, 0, 0, 0.2);
 }
 
 .card .card-image {
@@ -746,27 +765,27 @@ main .hero .flex-container .text-box {
 }
 
 .price-page .flex-container .card:nth-of-type(1)::before {
-    background-image: url(/images/paintball-hero.webp);
+    background-image: url('../images/paintball-hero.webp');
 }
 
 .price-page .flex-container .card:nth-of-type(2)::before {
-    background-image: url(/images/bumperball.webp);
+    background-image: url('../images/bumperball.webp');
 }
 
 .price-page .flex-container .card:nth-of-type(3)::before {
-    background-image: url(/images/buebattleimage.webp);
+    background-image: url('../images/buebattleimage.webp');
 }
 
 .price-page .flex-container .card:nth-of-type(4)::before {
-    background-image: url(/images/bazooka.webp);
+    background-image: url('../images/bazooka.webp');
 }
 
 .price-page .flex-container .card:nth-of-type(5)::before {
-    background-image: url(/images/sumo.webp);
+    background-image: url('../images/sumo.webp');
 }
 
 .price-page .flex-container .card:nth-of-type(6)::before {
-    background-image: url(/images/Image-Placeholder.webp);
+    background-image: url('../images/Image-Placeholder.webp');
 }
 
 .price-page .flex-container .card .prices {
@@ -872,23 +891,23 @@ main .hero .flex-container .text-box {
 }
 
 .instructor .card .sebastian {
-    background-image: url(/images/sebastian.webp);
+    background-image: url('../images/sebastian.webp');
 }
 
 .instructor .card .kornum {
-    background-image: url(/images/kornum.webp);
+    background-image: url('../images/kornum.webp');
 }
 
 .instructor .card .laura {
-    background-image: url(/images/laura.webp);
+    background-image: url('../images/laura.webp');
 }
 
 .instructor .card .henrik {
-    background-image: url(/images/henrik.webp);
+    background-image: url('../images/henrik.webp');
 }
 
 .instructor .card .allan {
-    background-image: url(/images/allan.webp);
+    background-image: url('../images/allan.webp');
 }
 
 /* Styling for event subpages | polterabend.html, firmaevent.html and blaamandag.html */
@@ -950,41 +969,42 @@ main .hero .flex-container .text-box {
 }
 
 /* Background hero section images for all subpages | Paintball.html, polterabend.html etc. */
-.paintball-hero {
-    background-image: url(/images/paintball-hero.webp);
+.card .paintball-hero {
+    background-image: url('../images/paintball-hero.webp');
 }
 
-.bazookaball-hero {
-    background-image: url(/images/bazooka-ball-hero.webp);
+.card .bazookaball-hero {
+    background-image: url('../images/bazooka-ball-hero.webp');
 }
 
-.buebattle-hero {
-    background-image: url(/images/buebattleimage.webp);
+.card .buebattle-hero {
+    background-image: url('../images/buebattleimage.webp');
 }
 
-.bumperball-hero {
-    background-image: url(/images/bumperball.webp);
+.card .bumperball-hero {
+    background-image: url('../images/bumperball.webp');
 }
 
-.firmaevent-hero {
-    background-image: url(/images/firmaevent.webp);
+.card .firmaevent-hero {
+    background-image: url('../images/firmaevent.webp');
+    background-position: 65% 35%;
 }
 
-.polterabend-hero {
-    background-image: url(/images/polterabend.webp);
+.card .polterabend-hero {
+    background-image: url('../images/polterabend.webp');
 }
 
-.promillehockey-hero {
-    background-image: url(/images/Image-Placeholder.webp);
+.card .promillehockey-hero {
+    background-image: url('../images/Image-Placeholder.webp');
 }
 
-.sumostafet-hero {
-    background-image: url(/images/sumo.webp);
+.card .sumostafet-hero {
+    background-image: url('../images/sumo.webp');
     background-position: top;
 }
 
-.blaamandag-hero {
-    background-image: url(/images/blaa-mandag.webp);
+.card .blaamandag-hero {
+    background-image: url('../images/blaa-mandag.webp');
 }
 
 /* Styling for booking.html */
@@ -1035,10 +1055,14 @@ main .hero .flex-container .text-box {
     position: relative;
 }
 
+.flatpickr-calendar {
+    font-family: 'Montserrat', sans-serif;
+}
+
 .custom-select select {
     cursor: pointer;
     appearance: none;
-    background-image: url(images/icons/down-arrow.svg);
+    background-image: url('../images/icons/down-arrow.svg');
     background-repeat: no-repeat;
     background-size: 12px;
     background-position: right 10% bottom 50%;
@@ -1137,7 +1161,7 @@ footer a:hover {
         flex-wrap: wrap;
         align-items: center;
     }
-    
+
     main .activities .flex-container {
         justify-content: center;
     }
@@ -1154,6 +1178,7 @@ footer a:hover {
 }
 
 @media screen and (max-width: 580px) {
+
     .swiper .swiper-button-prev,
     .swiper .swiper-button-next {
         display: none;
