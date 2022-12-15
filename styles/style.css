@@ -3,7 +3,7 @@
 
 @font-face {
     font-family: "Berlin";
-    src: url(fonts/Berlin.ttf);
+    src: url(/fonts/Berlin.ttf);
 }
 
 /* Root variables, so we don't have to write the hex color everytime */
@@ -12,7 +12,6 @@
     --background: #656d4a;
     --cta-button: #af0000;
     --shadow: #414833;
-    --background-secondary: #a4ac86;
     --black: #1b1b1b;
 }
 
@@ -147,6 +146,7 @@ footer {
     border-radius: 4px;
     font-size: 1rem;
     font-weight: 500;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.20);
 }
 
 .cta-button:hover,
@@ -346,18 +346,23 @@ header .mobile-menu {
     height: 100vh;
     position: absolute;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
     background: var(--shadow);
     z-index: 4000;
     left: 0;
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
 header .mobile-menu a {
     font-family: 'Berlin', sans-serif;
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--text);
 }
+
+header .mobile-menu a:first-of-type {
+    margin-top: 2rem;
+}
+
 
 header .scroll-progress {
     height: 4px;
@@ -579,6 +584,7 @@ main .hero .flex-container .text-box {
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.20);
     -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.20);
     -moz-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.20);
+    border-radius: 8px;
 }
 
 .card:hover {
@@ -594,6 +600,7 @@ main .hero .flex-container .text-box {
     background-repeat: no-repeat;
     height: 200px;
     width: 100%;
+    border-radius: 8px 8px 0 0;
 }
 
 #toggleActivities .sumostafet-hero {
@@ -603,6 +610,7 @@ main .hero .flex-container .text-box {
 .card .card-content {
     padding: 1rem;
     background-color: var(--shadow);
+    border-radius: 0 0 8px 8px;
 }
 
 .card .card-content p {
@@ -743,6 +751,10 @@ main .hero .flex-container .text-box {
 }
 
 /* Styling for priser.html */
+.price-page .title {
+    margin-bottom: 100px;
+}
+
 .price-page .flex-container {
     justify-content: center;
 }
@@ -751,6 +763,7 @@ main .hero .flex-container .text-box {
     position: relative;
     display: flex;
     flex-direction: column-reverse;
+    margin-bottom: 4rem;
 }
 
 .price-page .flex-container .card::before {
@@ -766,6 +779,7 @@ main .hero .flex-container .text-box {
     background-repeat: no-repeat;
     z-index: -100;
     filter: brightness(20%);
+    border-radius: 8px;
 }
 
 .price-page .flex-container .card:nth-of-type(1)::before {
@@ -793,13 +807,12 @@ main .hero .flex-container .text-box {
 }
 
 .price-page .flex-container .card .prices {
-    padding: 1rem;
+    padding: 1.5rem;
     min-height: 600px;
 }
 
 .price-page .flex-container .card .prices h1 {
     font-size: 1.25rem;
-    line-height: 1.8;
     text-decoration: underline;
 }
 
@@ -810,7 +823,11 @@ main .hero .flex-container .text-box {
 .price-page .flex-container .card .card-content {
     text-align: center;
     background: var(--text);
-    color: var(--background);
+    color: var(--shadow);
+    border-radius: 8px 8px 0 0;
+    position: absolute;
+    width: 100%;
+    top: -50px;
 }
 
 /* Styling for omos.html page (about-page) */
@@ -832,11 +849,16 @@ main .hero .flex-container .text-box {
     top: -10px;
     left: -10px;
     z-index: -1;
+    border-radius: 8px;
 }
 
 .about .image-container:first-of-type::after {
     top: 8px;
     left: 10px;
+}
+
+.about .image-container img {
+    border-radius: 8px;
 }
 
 .instructor .flex-container {
@@ -936,6 +958,7 @@ main .hero .flex-container .text-box {
     position: relative;
     height: fit-content;
     width: clamp(220px, 100%, 400px);
+    border-radius: 8px;
 }
 
 .price-box::after {
@@ -950,6 +973,7 @@ main .hero .flex-container .text-box {
     top: 0;
     left: 0;
     transform: translate(-12px, 12px);
+    border-radius: 8px;
 }
 
 .price-box h1,
@@ -1033,6 +1057,7 @@ main .hero .flex-container .text-box {
     width: 100%;
     padding: 2rem;
     background-color: var(--shadow);
+    border-radius: 8px;
 }
 
 .booking-section fieldset legend {
@@ -1085,6 +1110,10 @@ main .hero .flex-container .text-box {
 .custom-input input::placeholder {
     font-style: italic;
     font-size: 0.75rem;
+}
+
+.booking-section .dato {
+    cursor: pointer;
 }
 
 .booking-section .calendar-container {
@@ -1182,7 +1211,6 @@ footer a:hover {
 }
 
 @media screen and (max-width: 580px) {
-
     .swiper .swiper-button-prev,
     .swiper .swiper-button-next {
         display: none;
