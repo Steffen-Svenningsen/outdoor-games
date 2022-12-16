@@ -3,7 +3,7 @@
 
 @font-face {
     font-family: "Berlin";
-    src: url(/fonts/Berlin.ttf);
+    src: url(../fonts/Berlin.ttf);
 }
 
 /* Root variables, so we don't have to write the hex color everytime */
@@ -505,10 +505,13 @@ main .hero .flex-container .text-box {
     transform: rotate(180deg);
 }
 
-.swiper-slide .slide-content h3 {
+.swiper-slide .slide-content h2 {
     margin: 1rem;
+    font-size: 1.25rem;
     max-width: 300px;
     font-style: italic;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .swiper-slide .slide-content .customer-name {
