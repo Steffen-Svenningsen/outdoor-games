@@ -290,8 +290,7 @@ header .hamburger {
     border: none;
     outline: none;
     background: transparent;
-    width: 40px;
-    height: 40px;
+    padding: 0.5rem;
     cursor: pointer;
     display: none;
 }
