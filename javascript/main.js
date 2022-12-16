@@ -97,15 +97,17 @@ function scrollProgress() {
 var promoVideo = document.getElementById("video")
 
 // Event listener that listen for a scroll event on the window
-window.addEventListener("scroll", function () {
-    if (elFullyVisible(promoVideo)) {
-        promoVideo.play();
-    } else {
-        promoVideo.pause();
+if(promoVideo) {
+    window.addEventListener("scroll", function () {
+        if (elFullyVisible(promoVideo)) {
+            promoVideo.play();
+        } else {
+            promoVideo.pause();
+        }
+    });
+    
+    // Autoplay on the video when scrolled into the users viewport
+    function elFullyVisible(el) {
+        return (el.getBoundingClientRect().top >= 0 && el.getBoundingClientRect().bottom < window.innerHeight);
     }
-});
-
-// Autoplay on the video when scrolled into the users viewport
-function elFullyVisible(el) {
-    return (el.getBoundingClientRect().top >= 0 && el.getBoundingClientRect().bottom < window.innerHeight);
 }
