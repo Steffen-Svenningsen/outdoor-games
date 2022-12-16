@@ -614,8 +614,28 @@ main .hero .flex-container .text-box {
     border-radius: 8px 8px 0 0;
 }
 
-#toggleActivities .sumostafet-hero {
-    background-position: top;
+.card .paintball-card {
+    background-image: url('../images/paintball-card-image.jpg');
+}
+
+.card .promillehockey-card {
+    background-image: url('../images/promille-card-image.jpg');
+}
+
+.card .bumperball-card {
+    background-image: url('../images/bumperball-card-image.jpg');
+}
+
+.card .bazookaball-card {
+    background-image: url('../images/bazookaball-card-image.jpg');
+}
+
+.card .buebattle-card {
+    background-image: url('../images/buebattle-card-image.jpg');
+}
+
+.card .sumostafet-card {
+    background-image: url('../images/sumostafet-card-image.jpg');
 }
 
 .card .card-content {
@@ -928,23 +948,23 @@ main .hero .flex-container .text-box {
 }
 
 .instructor .card .sebastian {
-    background-image: url('../images/sebastian.webp');
+    background-image: url('../images/sebastian-smaller.jpg');
 }
 
 .instructor .card .kornum {
-    background-image: url('../images/kornum.webp');
+    background-image: url('../images/kornum-smaller.jpg');
 }
 
 .instructor .card .laura {
-    background-image: url('../images/laura.webp');
+    background-image: url('../images/laura-smaller.jpg');
 }
 
 .instructor .card .henrik {
-    background-image: url('../images/henrik.webp');
+    background-image: url('../images/henrik-smaller.jpg');
 }
 
 .instructor .card .allan {
-    background-image: url('../images/allan.webp');
+    background-image: url('../images/allan-smaller.jpg');
 }
 
 /* Styling for event subpages | polterabend.html, firmaevent.html and blaamandag.html */
@@ -1317,6 +1337,7 @@ footer a:hover {
 }
 
 @media screen and (max-width: 580px) {
+
     .swiper .swiper-button-prev,
     .swiper .swiper-button-next {
         display: none;
