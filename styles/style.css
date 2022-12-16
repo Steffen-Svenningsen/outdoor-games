@@ -1128,6 +1128,101 @@ main .hero .flex-container .text-box {
     width: 100px;
 }
 
+/* Styling for 404 error page */
+.errorpage-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 900px;
+    padding: 10rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.errorpage-wrapper>div {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.errorpage-wrapper::before {
+    top: 1rem;
+    left: 60%;
+    width: 410px;
+    z-index: -1;
+    content: '';
+    background-image: url("../images/big-splat.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+    height: 396px;
+    position: absolute;
+}
+
+.errorpage-wrapper h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.errorpage-wrapper p {
+    max-width: 40ch;
+    color: var(--text);
+    font-size: 1.25rem;
+}
+
+.errorpage-wrapper a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    top: 12rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: white;
+    width: 180px;
+    height: 60px;
+    padding-inline: 0.85rem;
+    border: 1px solid var(--text);
+    border-radius: 5px;
+    background-color: var(--cta-button);
+    z-index: 1;
+}
+
+.errorpage-wrapper a::before {
+    content: '';
+    background-image: url("../images/crosshair.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 225px;
+    height: 225px;
+    left: -20px;
+    top: -80px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.errorpage-wrapper a::after {
+    content: '';
+    background-image: url("../images/small-splat.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 90px;
+    width: 82px;
+    height: 69px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.errorpage-wrapper a:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+.errorpage-wrapper a:hover::before {
+    transform: scale(1.2);
+    transition: 0.5s ease-out;
+}
+
 /* Styling for the footer */
 footer {
     width: 100%;
